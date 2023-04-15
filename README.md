@@ -8,7 +8,7 @@ An app to demonstrate my understanding of System design in a [real world scenari
 #### What's a good reason why the pure Levenshtein Distance algorithm might be a more effective solution than the broader Damerau–Levenshtein Distance algorithm in this specific scenario?
 
 From the answer given in [this page](https://stats.stackexchange.com/questions/467000/levenshtein-distance-vs-damerau-levenstein-vs-optimal-string-alignment-distance), and I quote, 
-```
+```plain
 For two strings, a and b, Levenshtein Distance is the minimal number of insertions, deletions, and symbol substitutions required to transform a into b, while Damerau-Levenstein is like the Levenstein Distance, but you can also use transpositions (swapping of adjacent symbols).
 ```
 Since it'll be a rare occurrence for users to swap alphabets,(like Mosse, instead of, Moses) in their account names, removing the transposition checks will optimize the overall computational time of the request.
